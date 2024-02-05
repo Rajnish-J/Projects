@@ -40,32 +40,26 @@ class calculator{
         static void check_grade(){
             Scanner sc = new Scanner(System.in);
             int marks = 0;
-            System.out.print("Enter the grade: ");
             String grade = sc.nextLine();
             switch (grade) {
                 case "O":
                     marks = 10;
-                    System.out.println(marks);
                     break;
                 
                 case "A+":
                     marks = 9;
-                    System.out.println(marks);
                     break;
             
                 case "A":
                     marks = 8;
-                    System.out.println(marks);
                     break;
 
                 case "B+":
                     marks = 7;
-                    System.out.println(marks);
                     break;
 
                 case "B":
                     marks = 6;
-                    System.out.println(marks);
                     break;
                 
                 default:
@@ -77,9 +71,9 @@ class calculator{
         static void semester_one(){
             int gpa = 0;
             int count = 0;
-            System.out.println("Enter Engg phys: ");
+            System.out.print("Enter Engg phys: ");
             check_grade();
-            System.out.println("Enter engg chem");
+            System.out.print("Enter engg chem: ");
             check_grade();
 
         }
