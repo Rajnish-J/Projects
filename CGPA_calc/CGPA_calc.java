@@ -1,101 +1,82 @@
-import java.util.*;
+import java.util.Scanner;
 
-class calculator{
-    // main function
+class AnnaUniversityCGPACalculator {
+    static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the semester number to check gpa: ");
-            int semester = sc.nextInt();
-            switch (semester) {
-                case 1:
-                    semester_one();
-                    break;
-                case 2:
-                    semester_two();
-                    break;
-                case 3:
-                    semester_three();
-                    break;
-                case 4:
-                    semester_four();
-                    break;
-                case 5:
-                    semester_five();
-                    break;
-                case 6:
-                    semester_six();
-                    break;
-                case 7:
-                    semester_seven();
-                    break;
-                case 8:
-                    semester_eight();
-                    break;    
-                default:
-                    System.out.println("Enter the correct semester number");
-                    break;
-                }
-            }
-        
-        static void check_grade(){
-            Scanner sc = new Scanner(System.in);
-            int marks = 0;
-            String grade = sc.nextLine();
-            switch (grade) {
-                case "O":
-                    marks = 10;
-                    break;
-                
-                case "A+":
-                    marks = 9;
-                    break;
-            
-                case "A":
-                    marks = 8;
-                    break;
-
-                case "B+":
-                    marks = 7;
-                    break;
-
-                case "B":
-                    marks = 6;
-                    break;
-                
-                default:
-                    System.out.println("Enter the correct grade!!!");
-                    break;
-            }
-        }
-        
-        static void semester_one(){
-            int gpa = 0;
-            int count = 0;
-            System.out.print("Enter Engg phys: ");
-            check_grade();
-            System.out.print("Enter engg chem: ");
-            check_grade();
-
-        }
-        static void semester_two(){
-
-        }
-        static void semester_three(){
-
-        }
-        static void semester_four(){
-
-        }
-        static void semester_five(){
-
-        }
-        static void semester_six(){
-
-        }
-        static void semester_seven(){
-
-        }
-        static void semester_eight(){
-
+        System.out.println("Welcome to Anna University CGPA and GPA Calculator");
+        System.out.println("Choose an option:");
+        System.out.println("1. Calculate CGPA");
+        System.out.println("2. Calculate Semester GPA");
+        int choice = sc.nextInt();
+        switch (choice) {
+            case 1:
+                calculateCGPA();
+                break;
+            case 2:
+                calculateSemesterGPA();
+                break;
+            default:
+                System.out.println("Invalid choice");
+                break;
         }
     }
+
+    static void calculateCGPA() {
+        System.out.print("Enter the number of semesters: ");
+        int numSemesters = sc.nextInt();
+        double totalCredits = 0;
+        double totalGradePoints = 0;
+
+        for (int i = 1; i <= numSemesters; i++) {
+            System.out.println("Enter details for Semester " + i);
+            double semesterGPA = calculateSemesterGPA();
+            System.out.print("Enter credits for Semester " + i + ": ");
+            double credits = sc.nextDouble();
+            totalCredits += credits;
+            totalGradePoints += semesterGPA * credits;
+        }
+
+        double cgpa = totalGradePoints / totalCredits;
+        System.out.println("Your CGPA is: " + cgpa);
+    }
+
+    static double calculateSemesterGPA() {
+        System.out.print("Enter the number of subjects: ");
+        int numSubjects = sc.nextInt();
+        double totalCredits = 0;
+        double totalGradePoints = 0;
+
+        for (int i = 1; i <= numSubjects; i++) {
+            System.out.println("Enter details for Subject " + i);
+            System.out.print("Enter grade (O, A+, A, B+, B): ");
+            double gradePoints = getGradePoints(sc.next());
+            System.out.print("Enter credits for Subject " + i + ": ");
+            double credits = sc.nextDouble();
+            totalCredits += credits;
+            totalGradePoints += gradePoints * credits;
+        }
+
+        double gpa = totalGradePoints / totalCredits;
+        System.out.println("Your Semester GPA is: " + gpa);
+        return gpa;
+    }
+
+    static double getGradePoints(String grade) {
+        switch (grade.toUpperCase()) {
+            case "O":
+                return 10;
+            case "A+":
+                return 9;
+            case "A":
+                return 8;
+            case "B+":
+                return 7;
+            case "B":
+                return 6;
+            default:
+                System.out.println("Invalid grade entered");
+                return 0;
+        }
+    }
+}
