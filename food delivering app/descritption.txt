@@ -1,0 +1,4 @@
+In this folder, Food delivering application will be developed according to that in the each sub_folder contains difference concepts.
+
+S.no              Folder_name                                              description
+1                 Basic application                                        using decision making statements and result will be showed in the console.
