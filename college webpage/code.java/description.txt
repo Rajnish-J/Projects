@@ -1,0 +1,7 @@
+In this folder / project
+
+I created 3 files/ class, works like college web portal
+
+1. portal - this containts actual attributes for the portal, getter, setter methods!!
+2. portal driver - this class used to do the execution of the methods from portal class and act as intermediate between portal class and st_details class
+3. st_details - here only objects were created in the array (for the students)
