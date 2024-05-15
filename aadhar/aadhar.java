@@ -69,7 +69,7 @@ class aadhar{
     // verification methods
     public boolean DoVerification(){
         boolean res = true;
-        System.out.println("Enter the registered contact - no: ");
+        System.out.print("Enter the registered contact - no: ");
         long uecn = sc.nextLong();
 
         if(uecn != contact){
