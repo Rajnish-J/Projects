@@ -1,0 +1,1 @@
+In this project, I'm using OOPs concepts: Interface, class to build finding Simple Interest and Compound Interest of the customer

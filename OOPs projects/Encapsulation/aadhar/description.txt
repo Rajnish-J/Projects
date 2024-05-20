@@ -1,0 +1,5 @@
+In this project, the basic aadhar portal designed
+
+till now, already registered users can get and update their credintials through login with their phone numbers...
+
+future work: * making users can create their own account 

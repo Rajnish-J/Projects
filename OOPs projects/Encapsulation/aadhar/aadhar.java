@@ -7,7 +7,7 @@ class aadhar{
     private Long contact, aadhar_no;
 
     //constructor
-    private aadhar(){
+    private aadhar (){
 
     }
 

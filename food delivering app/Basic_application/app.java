@@ -161,7 +161,8 @@ class swiggy{
 
         String res = ((otp == user_otp) ? "Verified" : "Wrong OTP, Enter correct OTP...");
         if(res == "Verified"){
-            System.out.println("Payment done");
+            System.out.println("Payment done, u receive ur order soon");
+            System.out.println("Thank you");
         }
         if(res == "Wrong OTP, Enter correct OTP..."){
             System.out.println("Wrong OTP");
