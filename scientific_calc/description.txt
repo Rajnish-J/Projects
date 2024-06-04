@@ -1,0 +1,3 @@
+In this project user can get any calculations for:
+1. number programming.
+2. array programming.

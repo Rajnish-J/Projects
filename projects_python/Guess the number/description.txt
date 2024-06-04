@@ -1,0 +1,17 @@
+Project - Guess the number
+Welcome to our course on Building Projects using Python.
+
+In each module, we will build one project, step by step. First we will start with a demo of the final project we are going to build, 
+then in each lesson we will implement functionality one by one.
+
+In this module we will build a simple Guess the Number game.
+
+Click on Run button to play around with the game in the console to understand how it functions. 
+The project will take some time to load for the first time. Please be patient.
+
+Rules of the game
+
+The computer generates a random number between 1 to 100 and you need to guess the number
+If your guess is greater than the number by 10 or lower than the number by 10 - the system will output 'Cold'
+If your guess is within a + / - 10 range from the number, the system will output 'Hot'
+You have unlimited attempts.
