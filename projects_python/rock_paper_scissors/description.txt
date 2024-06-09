@@ -1,0 +1,15 @@
+Project - Rock Paper Scissors
+Let us build a simple Rock, Paper & Scissors game.
+
+Play around with the game in the console to understand how it functions - you will create this yourself in this module.
+
+Rules of the game explained
+
+In each chance - you have to select one of Rock, Paper or Scissors
+The computer also randomly selects one of Rock, Paper or Scissors
+Who wins the round?
+Rock beats Scissors (Rock crushes Scissors).
+Scissors beats Paper (Scissors cut Paper).
+Paper beats Rock (Paper covers Rock).
+If both select the same, then the round is a tie
+The match is a best of 3 rounds.
