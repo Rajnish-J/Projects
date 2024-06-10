@@ -1,0 +1,16 @@
+Project - Hangman
+
+Play around with the project in the console to understand how it functions - you will code it out in this module.
+
+What is happening in this Project?
+
+We are playing a word guessing game
+The rules are as follows
+    The length of the word is the count of chances or guesses that you get.
+    For every guess - whether correct or incorrect - total guesses is reduced by 1
+    For every guess, the following is displayed
+        If the guess is correct, the letter gets displayed at its correct position
+        If the guess is incorrect, an error message is provided to the user
+    Conditions for 'Winning'
+        If all letters are correctly guessed
+AND if all chances / guesses count is not yet 0
